@@ -5,6 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
+gem 'devise'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
@@ -39,7 +41,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 
-gem 'devise', git: 'https://github.com/plataformatec/devise' # , ref: '88e9a85'
 gem 'slim-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap', '~> 4.4.1'

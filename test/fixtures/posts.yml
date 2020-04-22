@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vocabulary: MyString
+  user: one
+
+two:
+  vocabulary: MyString
+  user: two
