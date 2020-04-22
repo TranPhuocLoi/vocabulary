@@ -41,7 +41,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 
-gem 'slim-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap', '~> 4.4.1'
 gem 'simple_form'

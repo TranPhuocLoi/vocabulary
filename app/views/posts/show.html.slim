@@ -5,7 +5,7 @@ p
   = @post.vocabulary
 p
   strong User:
-  = @post.user.email.split('@')[0]
+  = @post.user.username_def
 
 => link_to 'Edit', edit_post_path(@post)
 '|
