@@ -1,18 +1,24 @@
+<section class="bg-warning text-white py-5 mb-5">
+  <div class="container text-center">
+    <h1>VOCABULARY LIBRARY</h1>
+    <p class="lead">Starting points for finding information on learning English as a second language.</p>
+  </div>
+</section>
 <div class="container">
   <div class="row">
     <div class="col">
       <p id="notice"><%= notice %></p>
-      <h1>NEW VOCABULARY</h1>
-      <hr class="my-4">
       <table class="table table-stripe text-center">
         <thead class="thead-dark">
           <tr>
             <th>Vocabulary</th>
             <th>User</th>
             <th>Detail Vocabulary</th>
+            <% if (current_user) %>
             <th>Edit Vocabulary</th>
             <th>Delete Vocabulary</th>
           </tr>
+          <% end %>
         </thead>
         <tbody>
           <% @posts.each do |post| %>

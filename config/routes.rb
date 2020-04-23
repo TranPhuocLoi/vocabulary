@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     root to: 'home#index'
     
   end
+  scope '/vocabulary', module: :web, as: :web do
+    root to: 'home#vocabulary'
+    
+  end
   scope '/admin', module: :admin, as: :admin do
     root to: 'admin#home'
     resources :posts
