@@ -1,10 +1,11 @@
+<%= render 'navbar' %>
 <h1>hello</h1>
 <% if current_user %>
-<%= link_to 'View Post', posts_path %>
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'View Post', admin_posts_path %>
+<%= link_to 'New Post', new_admin_post_path %>
 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 <% else %>
-<%= link_to 'View Post', posts_path %>
+<%= link_to 'View Post', admin_posts_path %>
 <%= link_to 'Sign In', new_user_session_path %>
 <%= link_to 'Sign Up', new_user_registration_path %>
 <% end %>

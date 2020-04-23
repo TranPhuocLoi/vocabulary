@@ -1,0 +1,22 @@
+<%= form_with(model: [:admin, @post], local: true,class: :'form-group') do |form| %>
+<% if post.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+  <ul>
+    <% post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= form.label :vocabulary %>
+  <%= form.text_field :vocabulary, class: :"form-control" %>
+</div>
+
+<div class="actions">
+  <%= form.submit 'Add new',:class => 'btn btn-primary mt-4' %>
+</div>
+<% end %>
