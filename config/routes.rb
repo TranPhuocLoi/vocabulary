@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     
   end
   scope '/vocabulary', module: :web, as: :web do
-    root to: 'home#vocabulary'
+    root to: 'vocabulary#index'
     
   end
   scope '/admin', module: :admin, as: :admin do
