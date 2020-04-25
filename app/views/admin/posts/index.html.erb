@@ -17,8 +17,8 @@
             <% if (current_user) %>
             <th>Edit Vocabulary</th>
             <th>Delete Vocabulary</th>
+            <% end %>
           </tr>
-          <% end %>
         </thead>
         <tbody>
           <% @posts.each do |post| %>
@@ -26,7 +26,7 @@
             <td><%= post.vocabulary %></td>
             <td><%= post.user.username_def %></td>
             <td><%= link_to 'Show', admin_post_path(post),:class => "btn btn-info mr-2" %></td>
-            <% if current_user && current_user.admin %>
+            <% if current_user && current_user %>
             <td><%= link_to 'Edit', edit_admin_post_path(post),:class => "btn btn-warning mr-2" %></td>
             <td>
               <%= link_to 'Delete', admin_post_path(post), method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-danger mr-2" %>
