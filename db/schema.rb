@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_22_092304) do
+ActiveRecord::Schema.define(version: 2020_05_04_062610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 2020_04_22_092304) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "mp3_file_name"
+    t.string "mp3_content_type"
+    t.bigint "mp3_file_size"
+    t.datetime "mp3_updated_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

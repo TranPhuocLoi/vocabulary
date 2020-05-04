@@ -72,6 +72,6 @@ class Admin::PostsController < AdminController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:vocabulary)
+    params.require(:post).permit(:vocabulary,:mp3)
   end
 end
