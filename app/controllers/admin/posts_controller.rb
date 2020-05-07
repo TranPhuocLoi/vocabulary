@@ -74,4 +74,8 @@ class Admin::PostsController < AdminController
   def post_params
     params.require(:post).permit(:vocabulary,:mp3)
   end
+
+  
+
 end
+

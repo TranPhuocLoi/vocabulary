@@ -2,13 +2,22 @@
 
 Rails.application.routes.draw do
   devise_for :users
-
+    
   scope '/', module: :web, as: :web do
     root to: 'home#index'
-    
+    resources :posts do 
+      collection do
+        get '/random' => 'posts#random'
+      end
+    end
+    # get '/posts/random' => 'posts#random'
   end
   scope '/vocabulary', module: :web, as: :web do
     root to: 'vocabulary#index'
+    
+  end
+  scope '/vocabulary/random', module: :web, as: :web do
+    root to: 'random#random'
     
   end
   scope '/admin', module: :admin, as: :admin do

@@ -1,0 +1,19 @@
+<section class="bg-warning text-white py-5 mb-5">
+  <div class="container text-center">
+    <h1>RANDOM VOCABULARY</h1>
+  </div>
+</section>
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-success ">Random Vocabulary</button>
+      <% @posts.each do |post| %>
+      <script>
+        // var arr = [...post]
+        console.log(post)
+      </script>
+      <%= link_to 'Show', admin_post_path(post),:class => "btn btn-success mr-2" %>
+      <% end %>
+    </div>
+  </div>
+</div>
