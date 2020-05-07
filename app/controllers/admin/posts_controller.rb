@@ -28,16 +28,16 @@ class Admin::PostsController < AdminController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    puts @posts
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
+    puts @post
+    # respond_to do |format|
+    #   if @post.save
+    #     format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
+    #     format.json { render :show, status: :created, location: @post }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @post.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /posts/1
