@@ -21,12 +21,3 @@
   </div>
 </div>
 </div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col">
-      <% if @post.mp3.present? %>
-      <%= audio_tag(@post.mp3, controls:true, style:"width:100%") %>
-      <% end %>
-    </div>
-  </div>
-</div>

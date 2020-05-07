@@ -11,13 +11,7 @@
             User create: <%= post.user.username_def %></p>
         </td>
       </tr>
-      <div class="row">
-        <div class="col">
-          <% if post.mp3.present? %>
-          <%= audio_tag(post.mp3, controls:true, style:"width:50%") %>
-          <% end %>
-        </div>
-      </div>
+
       <% end %>
       <%= link_to 'Generate Vocabulary', random_web_posts_path,:class => 'btn btn-warning mt-4' %>
     </div>
