@@ -28,16 +28,17 @@ class Admin::PostsController < AdminController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
+    puts 'post'
     puts @post
-    # respond_to do |format|
-    #   if @post.save
-    #     format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
-    #     format.json { render :show, status: :created, location: @post }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @post.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /posts/1
@@ -73,7 +74,7 @@ class Admin::PostsController < AdminController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:vocabulary)
+    params.require(:post).permit(:vocabulary, :mp3)
   end
 
   
